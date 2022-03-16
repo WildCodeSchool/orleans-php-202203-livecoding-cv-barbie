@@ -15,4 +15,62 @@ body {
 h1, h2, h3, h4 {
     color: var(--primary);
     font-family: var(--title-font);
+    margin:0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    padding: var(--spacing);
+
+}
+
+.items {
+    display: flex;
+    gap: var(--spacing2);
+}
+
+.items:target {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing3);
+    position: fixed;
+    background-color: var(--primary);
+    opacity: 0.9;
+    width: 90%;
+    height: 100vh;
+    top:0;
+    left:0;
+    box-shadow: 0 4px 8px 4px var(--intermediate);
+}
+
+.burger {
+    fill: var(--light);
+    display: none;
+}
+
+nav h1, nav a {
+    color: var(--light)
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .burger {
+        display: initial;
+    }
+
+    .items {
+        display: none;
+    }
 }
