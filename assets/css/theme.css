@@ -5,11 +5,19 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin:0;
     font-size: var(--text-size);
     color: var(--dark);
     font-family: var(--text-font);
+}
+
+main {
+    padding-block-start: var(--spacing5);
 }
 
 h1, h2, h3, h4 {
@@ -25,6 +33,8 @@ nav {
     background-color: var(--primary);
     padding: var(--spacing);
 
+    position: fixed;
+    width: 100%;
 }
 
 .items {
@@ -37,15 +47,34 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--spacing3);
+    gap: var(--spacing4);
     position: fixed;
+    font-size: calc(var(--text-size) * 1.3);
     background-color: var(--primary);
-    opacity: 0.9;
+    opacity: 0.95;
     width: 90%;
     height: 100vh;
     top:0;
     left:0;
     box-shadow: 0 4px 8px 4px var(--intermediate);
+    animation: translate-nav 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.close {
+    display: none;
+}
+
+.items:target ~ .close {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    top:0;
+    right:0;
+    background-color: var(--intermediate);
+    opacity: 0.8;
 }
 
 .burger {
@@ -73,4 +102,17 @@ a:hover {
     .items {
         display: none;
     }
+}
+
+@keyframes translate-nav {
+    from {
+        translate: -100% 0;
+    }    
+    to {
+        translate: 0 0;
+    }
+} 
+
+section {
+    padding: var(--spacing2);
 }

@@ -15,4 +15,5 @@
     --spacing2: calc(2 * var(--spacing));
     --spacing3: calc(3 * var(--spacing));
     --spacing4: calc(4 * var(--spacing));
+    --spacing5: calc(5 * var(--spacing));
 }
