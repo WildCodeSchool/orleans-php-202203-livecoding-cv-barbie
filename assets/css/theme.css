@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Open+Sans:wght@300;400;500;700&display=swap');
+@import 'variable.css';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    font-size: var(--text-size);
+    color: var(--dark);
+    font-family: var(--text-font);
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary);
+    font-family: var(--title-font);
+}

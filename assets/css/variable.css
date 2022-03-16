@@ -1,0 +1,18 @@
+:root {
+    --primary: #E562B6;
+    --primary-light: #FBDAEF;
+    --primary-dark: #C53A92;
+    --intermediate: #867881;
+    --light: #FAF1F7;
+    --dark: #1D0213;
+
+    --title-font:  'Alegreya', serif;
+    --text-font: 'Open Sans', sans-serif;
+    --text-size:1.3rem;
+    --title-size: calc(2 * var(--text-size));
+
+    --spacing: 0.5rem;
+    --spacing2: calc(2 * var(--spacing));
+    --spacing3: calc(3 * var(--spacing));
+    --spacing4: calc(4 * var(--spacing));
+}
