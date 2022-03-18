@@ -1,2 +1,14 @@
 @import 'theme.css';
 
+.trainings {
+    --card-size: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-size), 1fr));
+    gap:var(--spacing);
+}
+
+.training {
+    background-color: var(--primary-light);
+    padding: var(--spacing2);
+    border-radius: 4px;
+}
